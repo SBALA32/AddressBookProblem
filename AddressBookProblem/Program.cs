@@ -7,7 +7,7 @@ namespace AddressBookSystem
         {
             Console.WriteLine("Welcome to Address Book Program.");
             AddressBook addressBook = new AddressBook();
-            addressBook.AddContact("Piyush", "Gupta", "JaiShreeRam", "Ramgarh", "MP", "piyush@gmail.com", 123456, 1234567890);
+            addressBook.AddContact("Sudipta", "Bala", "Helloworld", "kolkata", "WB", "sudiptra@gmail.com", 123456, 1234567890);
             addressBook.ViewContact();
         }
     }
