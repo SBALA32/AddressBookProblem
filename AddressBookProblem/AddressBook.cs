@@ -6,6 +6,7 @@ namespace AddressBookSystem
     class AddressBook
     {
         private Dictionary<string, Contact> addressBook = new Dictionary<string, Contact>();
+        private Dictionary<string, AddressBook> addressBookDictionary = new Dictionary<string, AddressBook>();
         public void AddContact(string firstName, string lastName, string address, string city, string state, string email, int zip, long phoneNumber)
         {
             Contact contact = new Contact();
@@ -109,6 +110,16 @@ namespace AddressBookSystem
             {
                 Console.WriteLine("\nNot Found, Try Again.\n");
             }
+        }
+        public void AddAddressBook(string bookName)
+        {
+            AddressBook addressBook = new AddressBook();
+            addressBookDictionary.Add(bookName, addressBook);
+            Console.WriteLine("AddressBook Created.");
+        }
+        public Dictionary<string, AddressBook> GetAddressBook()
+        {
+            return addressBookDictionary;
         }
     }
 }
